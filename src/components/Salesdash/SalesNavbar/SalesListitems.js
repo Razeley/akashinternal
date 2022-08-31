@@ -58,12 +58,6 @@ export const mainListItems = (
       },
       {
           id: 7,
-          icon: <HomeWorkIcon  />,
-          label: 'Enter something',
-          route: 'House',
-      },
-      {
-          id: 8,
           icon: <PeopleIcon />,
           label: 'Account',
           route: 'ChangePassword',

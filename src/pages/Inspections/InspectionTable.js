@@ -3,6 +3,7 @@ import { DataGrid, GridToolbarColumnsButton,
     GridToolbarContainer,
     GridToolbarFilterButton,
     GridToolbarExport,
+    GridToolbarQuickFilter,
    } from '@mui/x-data-grid';
 import axios from 'axios';
 import { useNavigate } from "react-router-dom";
@@ -25,6 +26,7 @@ function CustomToolbar(data) {
         <GridToolbarColumnsButton />
         <GridToolbarFilterButton />
         <GridToolbarExport />
+        <GridToolbarQuickFilter  />
       </GridToolbarContainer>
     );
   }

@@ -16,6 +16,7 @@ import ContactPageIcon from '@mui/icons-material/ContactPage';
 import BadgeIcon from '@mui/icons-material/Badge';
 import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
 import FoundationIcon from '@mui/icons-material/Foundation';
+import HomeSharpIcon from '@mui/icons-material/HomeSharp';
 
 export const mainListItems = (
     [
@@ -34,50 +35,50 @@ export const mainListItems = (
         {
             id: 2,
             icon: <HomeWorkIcon  />,
-            label: 'House Information',
+            label: 'House Info',
             route: 'House',
         },
         {
             id: 3,
-            icon: <FoundationIcon />,
+            icon: <HomeSharpIcon />,
             label: 'Inspections',
             route: 'InspectionTable',
         },
         {
             id: 4,
+            icon: <FoundationIcon   />,
+            label: 'Basement Insp',
+            route: 'InspectionTable',
+        },
+        {
+            id: 5,
             icon: <MonetizationOnIcon />,
             label: 'Sales ',
             route: 'HouseSales',
         },
         {
-            id: 5,
+            id: 6,
             icon: <PeopleIcon />,
             label: 'Customers ',
             route: 'CustomerTable',
         },
         {
-            id: 6,
+            id: 7,
             icon: <ContactPageIcon />, 
             label: 'Realtors',
             route: 'RealtorTable',
         },
         {
-          id: 7,
+          id: 8,
           icon: <ContactPageIcon />, 
           label: 'Contacts',
           route: 'Contacts',
       },
       {
-          id: 8,
+          id: 9,
           icon: <BadgeIcon />,
           label: 'Akash Staff',
           route: 'AdminStaff',
-      },
-      {
-          id: 9,
-          icon: <HomeWorkIcon  />,
-          label: 'Enter something',
-          route: 'House',
       },
       {
           id: 10,

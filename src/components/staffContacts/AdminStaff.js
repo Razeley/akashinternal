@@ -184,6 +184,10 @@ const columns = [
             <Box sx={{
         height: 1000,
         width: '100%',
+        '& .notReady': {
+          backgroundColor: '#FFFFFF',
+          color: '#FFFFFF'
+        },
             }} >
 
         <Typography id="modal-modal-title" variant="h6" component="h6" sx={{ mb:2 }} >
@@ -200,6 +204,12 @@ const columns = [
                         onProcessRowUpdateError={handleProcessRowUpdateError}
                         experimentalFeatures={{ newEditingApi: true }}
                         onCellClick={handleCellClick}
+                        getCellClassName={(params) => {
+                          if (params.value=== null    
+                          ) {
+                            return 'notReady';
+                          }             
+                        }}
                         >
             </DataGrid>
             
