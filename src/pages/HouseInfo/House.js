@@ -15,7 +15,7 @@ import Button from '@mui/material/Button';
 import CustomerOverview from '../../components/customer/CustomerOverview';
 import ServiceBookings from '../../components/house/ServiceBooking';
 import HouseColors from '../../components/house/HouseColors';
-import { useNavigate } from "react-router-dom";
+
 
 
 
@@ -25,7 +25,6 @@ const House = () => {
     const [ productType, setProductType ] = useState([]);
     const [ sqft, setSqft ] = useState([]);
     const [ staff, setStaff ] = useState([]);
-    const navigate = useNavigate();
     const [ username, setUsername ] = useState('');
     const [ community, setCommunity ] = useState([]);
     const [open, setOpen] = useState(false);
@@ -72,19 +71,7 @@ const House = () => {
         Basement: '',
         });
    
-        axios.defaults.withCredentials = true;
-useEffect(() => {
-          const fetchlogin =()=> {
-            axios.get("/login").then((response) => {
-              if (response.data.loggedIn == true) {
-              setUsername(response.data.user.username);
-              }
-              if (response.data.loggedIn == false ) {
-                navigate('/dashboard');
-              }
-            });}; 
-            fetchlogin();
-          }, []);
+
    
  useEffect(()=> {
         loadHouseData();

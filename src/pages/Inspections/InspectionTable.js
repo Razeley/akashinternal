@@ -6,7 +6,6 @@ import { DataGrid, GridToolbarColumnsButton,
     GridToolbarQuickFilter,
    } from '@mui/x-data-grid';
 import axios from 'axios';
-import { useNavigate } from "react-router-dom";
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
@@ -125,7 +124,6 @@ const InspectionTable = () => {
   const [ data, setData ] = useState([]);
   const [ clickInfo, setClickInfo ]= useState('');
   const theme = useTheme();
-  const navigate = useNavigate();
   const [ username, setUsername ] = useState('');
   const [ formData, setFormData ] = useState({
     failureType: '',
@@ -145,20 +143,6 @@ const id = clickInfo.id;
 const field = clickInfo.field;
 
 
-axios.defaults.withCredentials = true;
-
-useEffect(() => {
-  const fetchlogin =()=> {
-    axios.get("/login").then((response) => {
-      if (response.data.loggedIn == true) {
-      setUsername(response.data.user.username);
-      }
-      if (response.data.loggedIn == false ) {
-        navigate('/dashboard');
-      }
-    });}; 
-    fetchlogin();
-  }, []);
 
 
 
